@@ -1,0 +1,3 @@
+INDEX VERSION 1.130
+C:\Users\Kai\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1463321518.index
+\onlineShop\src\main\resources
