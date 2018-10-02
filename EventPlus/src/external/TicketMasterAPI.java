@@ -41,7 +41,7 @@ public class TicketMasterAPI {
         	HttpURLConnection connection = (HttpURLConnection) new URL(URL + "?" + query).openConnection();
         	int responseCode = connection.getResponseCode();
         	
-        	System.out.println("\nSending ‘GET’ request to URL " + URL + "?" + query);
+        	System.out.println("\nSending â€˜GETâ€™ request to URL " + URL + "?" + query);
         	System.out.println("Response Code: " + responseCode);
         	
         	BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
@@ -72,33 +72,6 @@ public class TicketMasterAPI {
     	return new ArrayList<Item>();
     }
     
-	/**
-	 * Helper methods
-	 */
-
-	//  {
-	//    "name": "laioffer",
-              //    "id": "12345",
-              //    "url": "www.laioffer.com",
-	//    ...
-	//    "_embedded": {
-	//	    "venues": [
-	//	        {
-	//		        "address": {
-	//		           "line1": "101 First St,",
-	//		           "line2": "Suite 101",
-	//		           "line3": "...",
-	//		        },
-	//		        "city": {
-	//		        	"name": "San Francisco"
-	//		        }
-	//		        ...
-	//	        },
-	//	        ...
-	//	    ]
-	//    }
-	//    ...
-	//  }
 	private String getAddress(JSONObject event) throws JSONException {
 		if (!event.isNull("_embedded")) {
 			JSONObject embedded = event.getJSONObject("_embedded");
@@ -252,10 +225,7 @@ public class TicketMasterAPI {
 		TicketMasterAPI tmApi = new TicketMasterAPI();
 		// Mountain View, CA
 		// tmApi.queryAPI(37.38, -122.08);
-		// London, UK
-		// tmApi.queryAPI(51.503364, -0.12);
-		// Houston, TX
-		tmApi.queryAPI(29.682684, -95.295410);
+		tmApi.queryAPI(37.38, -122.08);
 	}
 
 
